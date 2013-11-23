@@ -1,10 +1,16 @@
 GEM
   remote: https://rubygems.org/
   specs:
+    aws-s3 (0.6.3)
+      builder
+      mime-types
+      xml-simple
     backports (3.3.5)
+    builder (3.2.2)
     daemons (1.1.9)
     eventmachine (1.0.3)
     kgio (2.8.1)
+    mime-types (2.0)
     multi_json (1.8.2)
     rack (1.5.2)
     rack-protection (1.5.1)
@@ -33,11 +39,13 @@ GEM
       kgio (~> 2.6)
       rack
       raindrops (~> 0.7)
+    xml-simple (1.1.2)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
+  aws-s3 (~> 0.6.3)
   redis (~> 3.0.6)
   sinatra (~> 1.4.4)
   sinatra-contrib (~> 1.4.1)
