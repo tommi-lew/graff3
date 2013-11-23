@@ -6,6 +6,7 @@ GEM
       mime-types
       xml-simple
     backports (3.3.5)
+    base64_compatible (0.0.1)
     builder (3.2.2)
     daemons (1.1.9)
     eventmachine (1.0.3)
@@ -46,6 +47,7 @@ PLATFORMS
 
 DEPENDENCIES
   aws-s3 (~> 0.6.3)
+  base64_compatible (~> 0.0.1)
   redis (~> 3.0.6)
   sinatra (~> 1.4.4)
   sinatra-contrib (~> 1.4.1)
