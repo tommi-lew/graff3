@@ -15,8 +15,8 @@ RocknCoder.Pages = RocknCoder.Pages || {};
 			reSizeCanvas = function () {
 				var dims = RocknCoder.Dimensions.get();
 				$canvas.attr({
-					width: dims.width - 4,
-					height: dims.height - 4
+					width: dims.width -8,
+					height: dims.width -8
 				});
 				return dims;
 			},
