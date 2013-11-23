@@ -8,7 +8,17 @@ require "sinatra/reloader" if development?
 require 'base64'
 require 'aws/s3'
 include AWS::S3
+require "redis"
 
+# Redis
+if RACK_ENV != 'development'
+	# production
+	redis =  Redis.new(:host => ENV['REDISTOGO_URL'])
+else
+	redis = Redis.new
+end
+
+	
 get '/' do
 	send_file File.expand_path('index.html', settings.public_folder)
 end
@@ -25,6 +35,11 @@ post '/upload_tile' do
 
     S3Object.store("#{Time.now.to_f}.png", decoded_image, ENV['S3_BUCKET'],
                    access: :public_read)
+end
+
+get '/test_redis' do
+	redis.set("mykey", "hello world")
+	redis.get("mykey")
 end
 
 get '/ping' do
