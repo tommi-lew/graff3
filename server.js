@@ -12,4 +12,8 @@ app.get('/', function(req, res){
 	});
 });
 
+app.get('/ping', function(req, res) {
+	res.send("SP rocks!");
+});
+
 app.listen(process.env.PORT || 3000);
