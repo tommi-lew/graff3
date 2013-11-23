@@ -5,7 +5,7 @@ RACK_ENV ||= ENV["RACK_ENV"] || "development"
 require 'bundler/setup'
 require 'sinatra'
 require "sinatra/reloader" if development?
-require 'Base64'
+require 'base64'
 require 'aws/s3'
 include AWS::S3
 
