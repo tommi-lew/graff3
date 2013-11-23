@@ -44,7 +44,7 @@
 <div data-role="page" id="page1">
     <div data-theme="a" data-role="header">
         <h3>
-            Graff ³
+            Header
         </h3>
     </div>
     <div data-role="content">
@@ -54,7 +54,7 @@
 		<a data-role="button" href="#page2">
             New Canvas
         </a>
-		<a  data-role="button" onclick='return check()'>Load Canvas</a>
+        <button data-role="button" onClick="saveCards();">Load Canvas</button>
         <a data-role="button" href="#page1">
             Quit
         </a>
@@ -62,9 +62,6 @@
 </div>
 <div data-role="page" id="page2" data-rnc-jspage="paintPage">
     <div data-theme="a" data-role="header">
-		<a data-role="button" href="#page1" class="ui-btn-left">
-            Home
-        </a>
         <h3>
             Graff ³
         </h3>
