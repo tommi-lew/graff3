@@ -104,6 +104,28 @@
 		</section>
 	<script src="scripts/app.js" type="text/javascript"></script>
 	<script src="scripts/paintPage.js" type="text/javascript"></script>
+
+    <br><br>
+
+    <input type="button" value="Submit" onClick="submitTile()" />
+
+    <script>
+        function submitTile() {
+            var canvas = document.getElementById("flexBox");
+            var dataURL = canvas.toDataURL("image/png");
+
+            $.ajax({
+                type: "POST",
+                url: "/upload_tile",
+                data: {
+                    imgBase64: dataURL.replace(/^data:image\/(png|jpg);base64,/, "")
+                }
+            }).done(function(o) {
+                console.log('saved');
+            });
+        };
+    </script>
+
 </div>
 <div data-role="page" id="page3">
 	<div data-theme="a" data-role="header">
