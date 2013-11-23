@@ -55,8 +55,6 @@ get '/canvas' do
 		end
 	end
 
-	puts html
-
 	erb :'grid.html', :locals => {:grids => html}
 end
 
