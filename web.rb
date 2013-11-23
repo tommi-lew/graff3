@@ -34,13 +34,15 @@ post '/upload_tile' do
         secret_access_key: ENV['AWS_SECRET_ACCESS_KEY']
     )
 
-    S3Object.store("#{Time.now.to_f}.png", decoded_image, ENV['S3_BUCKET'],
+	aws_filename = "#{Time.now.to_f}.png";
+    S3Object.store(aws_filename, decoded_image, ENV['S3_BUCKET'],
                    access: :public_read)
-end
 
-get '/test_redis' do
-	redis.set("mykey", "hello world")
-	redis.get("mykey")
+    # save file name into redis
+	row = Random.new.rand(0..4) 
+	col = Random.new.rand(0..4)
+	pos = "#{row}-#{col}"
+	redis.hmset('c1', pos, aws_filename)
 end
 
 get '/ping' do
