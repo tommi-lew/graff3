@@ -116,6 +116,8 @@
             var canvas = document.getElementById("flexBox");
             var dataURL = canvas.toDataURL("image/png");
 
+            pop();
+
             $.ajax({
                 type: "POST",
                 url: "/upload_tile",
@@ -123,9 +125,18 @@
                     imgBase64: dataURL.replace(/^data:image\/(png|jpg);base64,/, "")
                 }
             }).done(function(o) {
-                console.log('saved');
+                window.location.replace('/canvas');
             });
         };
+
+        function pop() {
+            $.mobile.loading( 'show', {
+                    text: 'Uploading...',
+                    textVisible: true,
+                    theme: 'd',
+                    html: ""
+                });
+        }
     </script>
 
 </div>
