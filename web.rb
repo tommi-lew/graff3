@@ -33,7 +33,7 @@ get '/canvas' do
 
 			current_tile = redis.hmget('c1', current_key)[0]
 
-			src = "Graffcubed logo.png"
+			src = "empty.png"
 
 			if current_tile != nil
 				src = ENV['S3_HOST'] + "/" +  current_tile
