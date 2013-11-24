@@ -79,8 +79,8 @@ post '/upload_tile' do
 	redis.hmset('c1', pos, aws_filename)
 end
 
-get '/flush' do
-	redis.flushall
+get '/countries' do
+	erb :'flags.html'
 end
 
 get '/ping' do
