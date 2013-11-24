@@ -78,19 +78,3 @@ post '/upload_tile' do
 	pos = "#{row}-#{col}"
 	redis.hmset('c1', pos, aws_filename)
 end
-
-get '/countries' do
-	erb :'flags.html'
-end
-
-get '/places' do
-	erb :'places.html'
-end
-
-get '/sg' do
-	erb :'sg.html'
-end
-
-get '/ping' do
-	"SP rocks!"
-end
