@@ -79,6 +79,10 @@ post '/upload_tile' do
 	redis.hmset('c1', pos, aws_filename)
 end
 
+get '/flush' do
+	redis.flushall
+end
+
 get '/ping' do
 	"SP rocks!"
 end
