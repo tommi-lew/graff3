@@ -87,6 +87,10 @@ get '/places' do
 	erb :'places.html'
 end
 
+get '/sg' do
+	erb :'sg.html'
+end
+
 get '/ping' do
 	"SP rocks!"
 end
