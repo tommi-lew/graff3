@@ -83,6 +83,10 @@ get '/countries' do
 	erb :'flags.html'
 end
 
+get '/places' do
+	erb :'places.html'
+end
+
 get '/ping' do
 	"SP rocks!"
 end
