@@ -15,7 +15,7 @@ Graff3 (graff cube) is a tool that enables its users to express themselves by dr
 Graff3 (graffiti + cube) started off as an idea to develop a native android journaling  application using Samsung's S Pen SDK, and eventually evolved into the current state. We were inspired by a YouTube video featuring 3D graffiti and the Rubik's Cube. 
 
 ## What do we have now?
-The current size of the mosaic is a simple 5x5 canvas. Anyone can visit the application and express him or herself by drawing on the simple HTML canvas. Then, the work of art can be submitted and it will immediately become part of the digital canvas.
+The current size of the mosaic is a simple 5x5 canvas. Anyone can visit the application and express him or herself by drawing on the simple HTML canvas. Then, the work of art can be submitted and it will immediately become part of the digital mosaic.
 
 ## What can be done?
 * Size of the mosaic can be increased
