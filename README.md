@@ -43,10 +43,11 @@ The current size of the mosaic is a simple 5x5 canvas. Anyone can visit the appl
 
 **At the end:** Ruby Sinatra web app on Heroku + Redis + Amazon S3
 
-## Code smells
+## Code smells / bad practices
 * Untested code
 * Inline JavaScript
 * Repeated code which can be extracted as a template
+* Unmeaningful commit messages
 * Can be forgiven since the current workable product was produced in less than 18 hours :D
 
 
