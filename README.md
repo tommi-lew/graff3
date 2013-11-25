@@ -1,7 +1,7 @@
 # Graff³
 Graff3 (graff cube) is a tool that enables its users to express themselves by drawing and contributing to a virtual mosaic.
 
-**Note:** The drawing canvas only works on mobile browsers right now because it is only able to detect touch events, and not mouse events.
+**Note:** The drawing canvas only works on mobile browsers right now because it can only detect touch events, and not mouse events.
 
 ## Done by
 * Tommi
